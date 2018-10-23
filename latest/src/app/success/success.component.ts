@@ -1,0 +1,39 @@
+import { Component, OnInit } from '@angular/core';
+import { Blueray } from '../model/blueray';
+import {  ActivatedRoute } from '@angular/router';
+import { FeedServiceService } from '../services/feedback.service';
+
+@Component({
+  selector: 'app-success',
+  templateUrl: './success.component.html',
+  styleUrls: ['./success.component.css']
+})
+export class SuccessComponent implements OnInit {
+  blueray:Blueray;
+  thanku:string;
+
+  constructor(private fback: FeedServiceService,
+    private activatedRoute: ActivatedRoute) { 
+
+
+    this.blueray=  new Blueray();
+    this.thanku="/assets/thankful.png";
+
+  }
+
+  ngOnInit() {
+
+    this.activatedRoute.queryParams.subscribe(
+      (params) => {
+        let name = params['name'];
+        let opt = params['opt'];
+        if (name && opt=='a') {
+          this.fback.getCustomerByName(name).subscribe(
+            (data) => this.blueray = data
+          );
+        }
+      }
+    );
+  }
+
+}

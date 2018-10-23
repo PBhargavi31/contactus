@@ -1,0 +1,30 @@
+.tab{
+    margin-left: 28%;
+    border: solid 1px black;
+    padding: 70px;
+    margin-top:50px;
+    background-color:#D2DBE1;
+}
+table{
+    margin-top:50px;
+    margin-left: 50px;
+}
+
+input{
+    width: 210%;
+    font-size: 15px;
+    padding: 15px;
+}
+.icons{
+    float:right;
+margin-top: -50px;
+}
+button{
+    padding: 10px;
+    width: 70%;
+        margin-left: 80%;
+
+}
+label{
+    font-weight: bold;
+}

@@ -1,0 +1,32 @@
+
+
+#successmsg{
+    margin-top:30px; 
+    margin-left:29% ;
+    width: 870px;
+ 
+background-color:black;
+color: #015E87;
+    padding: 50px;
+    padding-left:-10px;
+transition: width 2s, height 4s;
+}
+
+#successmsg:hover{
+    width: 900px;
+    background-color: rgb(7, 66, 92);
+    color:hsl(48,  3%, 67%);
+    padding-left: 80px;
+
+
+}
+
+.ty{
+    clear: both;
+display: inline;
+float: right;
+    margin-top: -70px;
+}
+
+
+ 
